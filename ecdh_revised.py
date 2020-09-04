@@ -1,6 +1,6 @@
-
 import math
 import random
+import sys
 class Curve:
     def __init__(self, a, b):
         self.a = a
@@ -16,7 +16,7 @@ class Curve:
         return (self.a, self.b)==(C.a, C.b)
 
     def pointOnCurve(self, x, y):
-        return y*y == x*x*x + (self.a)*x + self.b
+        return round(y*y) == round(x*x*x + (self.a)*x + self.b)
 
     def printCurve(self):
         signA, signB = None, None
@@ -142,5 +142,5 @@ if __name__ == "__main__":
     p = Point(c,x, getYValue(a, b, x))
     if not c.pointOnCurve(p.x,p.y):
         print("\nINVALID POINT")
-        exit
+        sys.exit()
     ecdh(p)
