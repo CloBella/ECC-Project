@@ -5,7 +5,7 @@ import math
 #configure screen dpi (dots per inch)
 mpl.rcParams['figure.dpi'] = 180
 
-
+#Adapted from: https://github.com/fangpenlin/elliptic-curve-explained/blob/master/elliptic-curve.ipynb
 
 A = -3
 B = 5
